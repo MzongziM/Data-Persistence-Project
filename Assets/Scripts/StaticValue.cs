@@ -34,16 +34,15 @@ public class StaticValue : MonoBehaviour
 
     public string updateBestScore()//更新最高分数
     {
-        if (Instance.bestName!=null)
+        if (Instance.bestName=="")
         {
-            return $"Best Score : {bestName} : {bestScore}";
-        }
-        else if (Instance.bestName==null)
-        {
-            
-        }
-        {
+            Debug.Log("最好的名字为空");
             return "Best Score : No Record";
+        }
+        else
+        {
+            Debug.Log("最好的名字不为空");
+            return $"Best Score : {bestName} : {bestScore}";
         }
     }
     
